@@ -19,8 +19,6 @@ function App() {
         </a>
         <p>Hello World</p>
         <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
       </header>
     </div>
   );
