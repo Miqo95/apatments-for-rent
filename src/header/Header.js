@@ -14,6 +14,9 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { makeStyles } from "@mui/styles";
 import logo from "../images/logo.png";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const useStyles = makeStyles(() => {
   return {
@@ -26,10 +29,12 @@ const useStyles = makeStyles(() => {
       width: "800px",
     },
     rootHover: {
-      cursor: "pointer",
       "&:hover": {
         color: "#15A64A",
       },
+      color: "white",
+      textDecoration: "none",
+      fontSize: "16px !important",
     },
     mobileMenu: {
       backgroundColor: "#2C2C2C",
@@ -144,8 +149,13 @@ export default function Header() {
             <Typography
               variant="h6"
               noWrap
-              component="div"
-              sx={{ display: { xs: "none", sm: "block" }, color: "#15A64A" }}
+              component={Link}
+              to={"/"}
+              sx={{
+                display: { xs: "none", sm: "block" },
+                color: "#15A64A",
+                textDecoration: "none",
+              }}
             >
               HOME
             </Typography>
@@ -153,7 +163,8 @@ export default function Header() {
             <Typography
               variant="h5"
               noWrap
-              component="div"
+              component={Link}
+              to={"/about"}
               sx={{ display: { xs: "none", sm: "block" } }}
               className={classes.rootHover}
             >
@@ -162,7 +173,8 @@ export default function Header() {
             <Typography
               variant="h5"
               noWrap
-              component="div"
+              component={Link}
+              to={"/menu"}
               sx={{ display: { xs: "none", sm: "block" } }}
               className={classes.rootHover}
             >
@@ -171,7 +183,8 @@ export default function Header() {
             <Typography
               variant="h5"
               noWrap
-              component="div"
+              component={Link}
+              to={"/delivery"}
               sx={{ display: { xs: "none", sm: "block" } }}
               className={classes.rootHover}
             >
@@ -180,7 +193,8 @@ export default function Header() {
             <Typography
               variant="h5"
               noWrap
-              component="div"
+              component={Link}
+              to={"/gallery"}
               sx={{ display: { xs: "none", sm: "block" } }}
               className={classes.rootHover}
             >
@@ -189,7 +203,8 @@ export default function Header() {
             <Typography
               variant="h5"
               noWrap
-              component="div"
+              component={Link}
+              to={"/contact"}
               sx={{ display: { xs: "none", sm: "block" } }}
               className={classes.rootHover}
             >
@@ -197,18 +212,20 @@ export default function Header() {
             </Typography>
           </div>
 
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "flex", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
+          <div style={{ marginLeft: "100px" }}>
+            <Box sx={{ flexGrow: 1 }} />
+            <Box sx={{ display: { xs: "flex", md: "flex" } }}>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <Badge badgeContent={1} color="error">
+                  {/* <MailIcon /> */}
+                  <AddShoppingCartIcon />
+                </Badge>
+              </IconButton>
+              {/* <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -218,8 +235,18 @@ export default function Header() {
               color="inherit"
             >
               <AccountCircle />
-            </IconButton>
-          </Box>
+            </IconButton> */}
+              <Button
+                className={classes.btnCol}
+                component={Link}
+                to="/sign-up"
+                color="inherit"
+              >
+                Register
+              </Button>
+            </Box>
+          </div>
+
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
