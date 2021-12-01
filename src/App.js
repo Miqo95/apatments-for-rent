@@ -4,6 +4,8 @@ import SignUp from "./components/Authentification/SignUp";
 import Header from "./header/Header";
 import About from "./components/Authentification/About";
 import Footer from "./components/footer/Footer";
+import Delivery from "./components/Authentification/Delivery";
+import Contact from "./components/Authentification/Contact";
 
 function App() {
   return (
@@ -37,6 +39,26 @@ function App() {
             <div>
               <Header />
               <About />
+              <Footer />
+            </div>
+          }
+        />
+        <Route
+          path="/delivery"
+          element={
+            <div>
+              <Header />
+              <Delivery />
+              <Footer />
+            </div>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <div>
+              <Header />
+              <Contact />
               <Footer />
             </div>
           }
