@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   deliveryPage: {
-    // padding: "2% 4%",
     marginTop: "80px",
-    // marginLeft: "70px",
     position: "relative",
     backgroundColor: "#EEEBE8",
   },
