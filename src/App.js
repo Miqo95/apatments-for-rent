@@ -6,6 +6,7 @@ import About from "./components/Authentification/About";
 import Footer from "./components/footer/Footer";
 import Delivery from "./components/Authentification/Delivery";
 import Contact from "./components/Authentification/Contact";
+import Gallery from "./components/Authentification/Gallery";
 
 function App() {
   return (
@@ -59,6 +60,16 @@ function App() {
             <div>
               <Header />
               <Contact />
+              <Footer />
+            </div>
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <div>
+              <Header />
+              <Gallery />
               <Footer />
             </div>
           }
