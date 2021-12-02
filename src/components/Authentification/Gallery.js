@@ -23,6 +23,7 @@ const useStyles = makeStyles({
     border: "1px #1BAF5A solid ",
     borderRadius: 5,
     padding: "14px 10px",
+    cursor: "pointer",
   },
   img: {
     width: 330,
@@ -50,7 +51,7 @@ const useStyles = makeStyles({
 function Gallery() {
   const classes = useStyles();
   const [page, setPage] = useState(1);
-  const [active, setActive] = useState("classes.buttonActiv");
+  const [catImg, setCatImg] = useState("all");
   const pageOne = [
     "images/1.jpg",
     "images/2.jpg",
@@ -73,27 +74,73 @@ function Gallery() {
     "images/17.jpg",
     "images/18.jpg",
   ];
+  const pageProductOne = [
+    "images/p1.jpg",
+    "images/p2.jpg",
+    "images/p3.jpg",
+    "images/p4.jpg",
+    "images/p5.jpg",
+    "images/p6.jpg",
+    "images/p7.jpg",
+    "images/p8.jpg",
+    "images/p9.jpg",
+  ];
+  const pageProductTwo = [
+    "images/p10.jpg",
+    "images/p11.jpg",
+    "images/p12.jpg",
+    "images/p13.jpg",
+    "images/p14.jpg",
+    "images/p15.jpg",
+    "images/p16.jpg",
+    "images/p17.jpg",
+    "images/p18.jpg",
+  ];
   const changePageOne = () => {
     setPage(1);
   };
   const changePageTwo = () => {
     setPage(2);
   };
+  const pageAllImg = () => {
+    setPage(1);
+    setCatImg("all");
+  };
+  const pageProImg = () => {
+    setPage(1);
+    setCatImg("pro");
+  };
   return (
     <div className={classes.galleryPage}>
       <div className={classes.flexBut}>
-        <button className={classes.buttonActiv}>ALL</button>
+        <button onClick={pageAllImg} className={classes.buttonActiv}>
+          ALL
+        </button>
         <button className={classes.button}>TUMANYAN FOOD</button>
-        <button className={classes.button}>PRODUCTS</button>
+        <button onClick={pageProImg} className={classes.button}>
+          PRODUCTS
+        </button>
         <button className={classes.button}>LUNCHES</button>
       </div>
       <div className={classes.contImg}>
         {page === 1 &&
+          catImg === "all" &&
           pageOne.map((src) => {
             return <img src={src} className={classes.img} />;
           })}
         {page === 2 &&
+          catImg === "all" &&
           pageTwo.map((src) => {
+            return <img src={src} className={classes.img} />;
+          })}
+        {page === 1 &&
+          catImg === "pro" &&
+          pageProductOne.map((src) => {
+            return <img src={src} className={classes.img} />;
+          })}
+        {page === 2 &&
+          catImg === "pro" &&
+          pageProductTwo.map((src) => {
             return <img src={src} className={classes.img} />;
           })}
       </div>
