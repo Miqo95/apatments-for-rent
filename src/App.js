@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import Delivery from "./components/Authentification/Delivery";
 import Contact from "./components/Authentification/Contact";
 import Gallery from "./components/Authentification/Gallery";
+import Home from "./components/Authentification/Home";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           element={
             <div>
               <Header />
+              <Home />
               <Footer />
             </div>
           }
