@@ -117,6 +117,39 @@ const useStyles = makeStyles({
     width: 400,
     fontStyle: "italic",
   },
+  aboutTxt: {
+    fontSize: 48,
+    fontStyle: "italic",
+    fontWeight: "700",
+  },
+  backgImg: {
+    color: "white",
+    backgroundImage: "url('images/ners.jpg')",
+    backgroundPosition: "center",
+    height: 700,
+  },
+  txtBacImg: {
+    fontSize: 18,
+    fontWeight: 700,
+  },
+  abotSpanFirst: {
+    position: "absolute",
+    left: "25%",
+    top: 30,
+    height: 1,
+    backgroundColor: "#dad7d5",
+    maxWidth: 183,
+    width: "100%",
+  },
+  abotSpanLast: {
+    position: "absolute",
+    right: "25%",
+    top: 30,
+    height: 1,
+    backgroundColor: "#dad7d5",
+    maxWidth: 183,
+    width: "100%",
+  },
 });
 
 function Home() {
@@ -188,6 +221,26 @@ function Home() {
             <img src="images/app.png" className={classes.pngImg} />
           </div>
         </div>
+      </div>
+
+      <div className={classes.backgImg}>
+        <img src="images/logo2.png" />
+        <div style={{ position: "relative" }}>
+          <p className={classes.aboutTxt}>
+            <span className={classes.abotSpanFirst}></span>ABOUT US
+            <span className={classes.abotSpanLast}></span>
+          </p>
+        </div>
+        <h2>1998թ.-ից</h2>
+        <p className={classes.txtBacImg}>
+          Tumanyan Shaurma was founded in 1998.
+        </p>
+        <p className={classes.txtBacImg}>
+          The first branch of Tumanyan Shaurma was situated on the crossroad of
+        </p>
+        <p className={classes.txtBacImg}>
+          the Tumanyan-Abovyan streets, which was occupied a rather small area.
+        </p>
       </div>
     </div>
   );
