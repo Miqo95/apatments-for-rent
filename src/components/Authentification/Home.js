@@ -241,9 +241,6 @@ function Home() {
         <p className={classes.txtBacImg}>
           the Tumanyan-Abovyan streets, which was occupied a rather small area.
         </p>
-        <p className={classes.txtBacImg}>
-          the Tumanyan-Abovyan streets, which was occupied a rather small area.
-        </p>
       </div>
     </div>
   );
