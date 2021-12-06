@@ -126,22 +126,22 @@ function Gallery() {
         {page === 1 &&
           catImg === "all" &&
           pageOne.map((src) => {
-            return <img src={src} className={classes.img} />;
+            return <img src={src} className={classes.img} alt="" />;
           })}
         {page === 2 &&
           catImg === "all" &&
           pageTwo.map((src) => {
-            return <img src={src} className={classes.img} />;
+            return <img src={src} className={classes.img} alt="" />;
           })}
         {page === 1 &&
           catImg === "pro" &&
           pageProductOne.map((src) => {
-            return <img src={src} className={classes.img} />;
+            return <img src={src} className={classes.img} alt="" />;
           })}
         {page === 2 &&
           catImg === "pro" &&
           pageProductTwo.map((src) => {
-            return <img src={src} className={classes.img} />;
+            return <img src={src} className={classes.img} alt="" />;
           })}
       </div>
       <div className={classes.pagination}>
