@@ -1,5 +1,7 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import Carousel from "../main/Carousel";
+import CallIcon from "@mui/icons-material/Call";
 
 const useStyles = makeStyles({
   homePage: {
@@ -22,6 +24,15 @@ const useStyles = makeStyles({
     backgroundColor: "#efebe8",
     position: "relative",
     zIndex: 99,
+  },
+  titleDelivery: {
+    fontSize: 40,
+    color: "black",
+    fontStyle: "italic",
+    paddingBottom: 20,
+    paddingTop: 20,
+    borderBottom: "1px #DFDFDF solid",
+    overflow: "hidden",
   },
   lineFirst: {
     // color: "red",
@@ -150,6 +161,45 @@ const useStyles = makeStyles({
     maxWidth: 183,
     width: "100%",
   },
+  delParent: {
+    textAlign: "left",
+    width: "70%",
+    margin: "auto",
+  },
+  deliText: {
+    color: "#616161",
+    fontSize: 18,
+    width: "95%",
+  },
+  delBut: {
+    border: "none",
+    color: "#fff",
+    textTransform: "uppercase",
+    backgroundColor: "#13ad54",
+    fontSize: 18,
+
+    borderRadius: 5,
+    marginTop: 30,
+    padding: "14px 51px",
+    cursor: "pointer",
+  },
+  delBorder: {
+    height: 1,
+    backgroundColor: "#dfdfdf",
+    width: "100%",
+    maxWidth: 477,
+  },
+  delTelTit: {
+    fontSize: 18,
+    fontStyle: "italic",
+    color: "#2c2c2c",
+  },
+  delTel: {
+    marginTop: 10,
+    fontSize: 24,
+    fontWeight: "700",
+    color: "#eb2f2f",
+  },
 });
 
 function Home() {
@@ -166,39 +216,39 @@ function Home() {
       </div>
       <div className={classes.imageList}>
         <div className={classes.figImg}>
-          <img className={classes.img} src="images/salad.jpg" />
+          <img className={classes.img} src="images/salad.jpg" alt="" />
           <p className={classes.fgCaption}>SALAD</p>
         </div>
         <div className={classes.figImg}>
-          <img className={classes.img} src="images/shaurma.jpg" />
+          <img className={classes.img} src="images/shaurma.jpg" alt="" />
           <p className={classes.fgCaption}>SHAURMA</p>
         </div>
         <div className={classes.figImg}>
-          <img className={classes.img} src="images/barbecue.jpg" />
+          <img className={classes.img} src="images/barbecue.jpg" alt="" />
           <p className={classes.fgCaption}>BARBECUE</p>
         </div>
         <div className={classes.figImg}>
-          <img className={classes.img} src="images/kebab.jpg" />
+          <img className={classes.img} src="images/kebab.jpg" alt="" />
           <p className={classes.fgCaption}>KEBAB</p>
         </div>
         <div className={classes.figImg}>
-          <img className={classes.img} src="images/ikibir.jpg" />
+          <img className={classes.img} src="images/ikibir.jpg" alt="" />
           <p className={classes.fgCaption}>IKIBIR</p>
         </div>
         <div className={classes.figImg}>
-          <img className={classes.img} src="images/fastfood.jpg" />
+          <img className={classes.img} src="images/fastfood.jpg" alt="" />
           <p className={classes.fgCaption}>FAST FOOD</p>
         </div>
         <div className={classes.figImg}>
-          <img className={classes.img} src="images/combooffers.jpg" />
+          <img className={classes.img} src="images/combooffers.jpg" alt="" />
           <p className={classes.fgCaption}>COMBO OFERS</p>
         </div>
         <div className={classes.figImg}>
-          <img className={classes.img} src="images/drinks.png" />
+          <img className={classes.img} src="images/drinks.png" alt="" />
           <p className={classes.fgCaption}>DRINKS</p>
         </div>
         <div className={classes.figImg}>
-          <img className={classes.img} src="images/grandbuffet.jpg" />
+          <img className={classes.img} src="images/grandbuffet.jpg" alt="" />
           <p className={classes.fgCaption}>GRAND BUFFET</p>
         </div>
       </div>
@@ -209,22 +259,26 @@ function Home() {
       </div>
       <div className={classes.whitePage}>
         <div style={{ paddingRight: 40 }}>
-          <img src="images/tel.jpeg" style={{ width: "75%", height: "95%" }} />
+          <img
+            src="images/tel.jpeg"
+            style={{ width: "75%", height: "95%" }}
+            alt=""
+          />
         </div>
         <div>
           <p className={classes.txtWhitepage}>TUMANYAN SHAURMA MOBILE APPS</p>
           <div style={{ cursor: "pointer", height: 100 }}>
-            <img src="images/play.png" className={classes.pngImg} />
+            <img src="images/play.png" className={classes.pngImg} alt="" />
           </div>
 
           <div style={{ cursor: "pointer" }}>
-            <img src="images/app.png" className={classes.pngImg} />
+            <img src="images/app.png" className={classes.pngImg} alt="" />
           </div>
         </div>
       </div>
 
       <div className={classes.backgImg}>
-        <img src="images/logo2.png" />
+        <img src="images/logo2.png" alt="" />
         <div style={{ position: "relative" }}>
           <p className={classes.aboutTxt}>
             <span className={classes.abotSpanFirst}></span>ABOUT US
@@ -241,6 +295,31 @@ function Home() {
         <p className={classes.txtBacImg}>
           the Tumanyan-Abovyan streets, which was occupied a rather small area.
         </p>
+      </div>
+      <Carousel />
+      <div style={{ backgroundColor: "white" }}>
+        <div className={classes.delParent}>
+          <p className={classes.titleDelivery}>DELIVERY</p>
+          <p className={classes.deliText}>
+            There are many fast foods and delivery services in the city, but
+            "Tumanyan Shaurma" fast food chain offers you fully new
+            opportunities (chances).
+          </p>
+          <p className={classes.deliText}>
+            As before you can call 81-88 short number or 011-81-88-88 numbers
+            and our operators will accept your order..
+          </p>
+          <button className={classes.delBut}>MORE</button>
+          <div style={{ padding: "45px 0px" }}>
+            <div className={classes.delBorder}></div>
+          </div>
+          <div>
+            <p className={classes.delTelTit}>Order right now:</p>
+            <p className={classes.delTel}>
+              <CallIcon /> 011-81-88-88, 81-88
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
