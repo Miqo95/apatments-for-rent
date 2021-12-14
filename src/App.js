@@ -8,6 +8,7 @@ import Delivery from "./components/Authentification/Delivery";
 import Contact from "./components/Authentification/Contact";
 import Gallery from "./components/Authentification/Gallery";
 import Home from "./components/Authentification/Home";
+import { Menu } from "@mui/material";
 
 function App() {
   return (
@@ -72,6 +73,16 @@ function App() {
             <div>
               <Header />
               <Gallery />
+              <Footer />
+            </div>
+          }
+        />
+        <Route
+          path="/menu"
+          element={
+            <div>
+              <Header />
+              <Menu />
               <Footer />
             </div>
           }
